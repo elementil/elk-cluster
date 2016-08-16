@@ -1,0 +1,16 @@
+network.host: 0.0.0.0
+cluster.name: cloud
+node.name: "elk1"
+node.master: true
+node.data: true
+node.location: aws
+node.max_local_storage_nodes: 1
+index.number_of_shards: 3
+index.number_of_replicas: 1
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ["dockerelk_elasticsearch3_1", "dockerelk_elasticsearch2_1"]
+http.cors.allow-origin: "/.*/"
+http.cors.enabled: true
+http.jsonp.enable: true
+path.data: /usr/share/elasticsearch/data
+
